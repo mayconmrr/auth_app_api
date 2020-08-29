@@ -6,10 +6,15 @@ class SessionsController < ApplicationController
       token = AuthToken.issue(user_id: user.id)
       $redis.hset(token, 'user_id', user.id)
       $redis.expire(token, 20.minutes.to_i)
-      render json: { token: token}
+      render json: { token: token }
     else
       render json: { error: 'Invalid username or password' }, status: :unauthorized
     end
+  end
+
+  def destroy
+    $redis.del(current_token)
+    render nothing: true, status: :ok, content_type: 'application/json'
   end
 
   private
