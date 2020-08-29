@@ -16,11 +16,4 @@ class SessionsController < ApplicationController
     $redis.del(current_token)
     render nothing: true, status: :ok, content_type: 'application/json'
   end
-
-  private
-
-  def authentication_params
-    # Todo - Use authentication_params
-    params.require(:authentication).permit(:username, :password)
-  end
 end
