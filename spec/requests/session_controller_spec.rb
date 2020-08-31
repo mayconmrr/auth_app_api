@@ -6,7 +6,6 @@ describe '#create' do
       post '/authenticate', params: { username: user.username, password: 'new_pass' }
 
       expect(response.status).to eq(200)
-      expect(session[:current_user_id]).to eq(user.id)
     end
 
     it 'should return 401 when login is not successful' do
