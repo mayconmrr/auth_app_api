@@ -23,6 +23,9 @@ Run in you console:
 rspec
 ```
 
+## API Documentation:
+`http://localhost:3000/api-docs`
+
 
 Brief explanation about the application:
 This project has 3 main points:
