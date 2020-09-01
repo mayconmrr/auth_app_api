@@ -1,24 +1,36 @@
-# README
+# Ruby on Rails - Auth API
+Authentication API project using Rails and Redis
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby version
+ruby 2.7.0
 
-Things you may want to cover:
+## Rails version
+Rails 6.0.3
 
-* Ruby version
+## System dependencies
 
-* System dependencies
+* Any *nix plataform
 
-* Configuration
+## Setup
+Run in your console:
+```
+bin/setup
+```
 
-* Database creation
+## Run Tests
+Run in you console:
+```
+rspec
+```
 
-* Database initialization
 
-* How to run the test suite
+Brief explanation about the application:
+This project has 3 main points:
+```
+User registration
+Use Login
+User Logout
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+User Registration is simple post in `host.com/api/v1/users`
+Login and logout will be handled by `SessionsController`, by the service `Session` and by the lib `AuthToken`
