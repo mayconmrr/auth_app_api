@@ -22,18 +22,3 @@ Run in you console:
 ```
 rspec
 ```
-
-## API Documentation:
-`http://localhost:3000/api-docs`
-
-
-Brief explanation about the application:
-This project has 3 main points:
-```
-User registration
-Use Login
-User Logout
-```
-
-User Registration is simple post in `host.com/api/v1/users`
-Login and logout will be handled by `SessionsController`, by the service `Session` and by the lib `AuthToken`
